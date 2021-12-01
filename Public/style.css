@@ -1,0 +1,84 @@
+
+
+.page {
+  display: flex;
+  height: fit-content;
+  margin-top: 10px;
+}
+
+.side {
+  background-color: cornflowerblue;
+  width: 30%;
+  height: 600px;
+}
+
+.middle {
+  background-color: white;
+  width: 40%;
+  height: 600px;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+}
+.upperNav {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.lowerNav {
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar div {
+  height: 35px;
+  flex-grow: 5;
+  padding: 5px;
+}
+
+.calenderImg {
+  width: 40px;
+  display: flex;
+  justify-content: flex-start;
+}
+.userImg {
+  margin-left: 300px;
+  width: 40px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.search-container {
+  display: flex;
+}
+
+.search-container > input {
+  box-sizing: border-box;
+  height: 30px;
+  width: 75%;
+  margin: 0;
+  padding: 5px;
+  border: 1px solid #1778bd;
+}
+.search-container > button {
+  height: 30px;
+  width: 25%;
+  margin: 0;
+  padding: 5px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border: 1px solid #1778bd;
+  background-color: #1778bd;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+}
+.search-container button:hover {
+  background-color: skyblue;
+}

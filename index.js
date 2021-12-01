@@ -12,7 +12,8 @@ app.use((req, res, next) => {
 
 app.get('/', (req, res) => {
     let posts = [
-        {id:1, title: "books titles", body: "description of the book"}
+        {id:1, title: "books titles", body: "description of the book"},
+        {id:2, title: "books title 2", body: "descript scksdnkdc k"}
     ];
     res.render('posts', {posts: posts})
 });
