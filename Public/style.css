@@ -82,3 +82,54 @@
 .search-container button:hover {
   background-color: skyblue;
 }
+
+.newPost {
+  height: 300px;
+  width: 500px;
+  margin: 20px auto;
+  background-color: violet;
+
+}
+
+
+
+
+.post{
+  margin: 20px auto;
+  border: 1px solid darkgray;
+  border-radius: 5%;
+  width: 70%;
+  padding: 15px;
+  font-weight: bold;
+  font-size: 20px;
+  box-shadow: 5px 5px 5px 5px gray;
+}
+.post-top{
+  display: flex;
+  justify-content: space-between;
+  height: 30px;
+  font-weight: normal;
+  color: gray;
+  font-size: 15px;
+}
+.post-image{
+  display: flex;
+  justify-content: center;
+  height: 350px;
+  padding-top: 10px;
+  overflow: hidden;
+}
+
+.like_button button{
+  border: none;
+  padding: 5px;
+  background-color: white;
+  margin-top: 10px;
+}
+.like_button button:hover{
+  background-color: skyblue;
+}
+.likeimage {
+  width: 30px;
+  height: 30px;
+}
