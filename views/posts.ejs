@@ -21,6 +21,15 @@
             <button ><img src="likebutton.jpg" alt="Account profile" class="likeimage"></button> 
           </div>
       </div> 
+      <% if (posts.length > 0) { %>
+        <% posts.forEach(post => { %>
+        <h3 class="title">
+        <%= post.body %>
+        </h3>
+        <% }) %>
+        <% } else { %>
+        <p>You did not post anything...</p>
+        <% } %>
       </div>
     </a>
       <div class="side"></div>

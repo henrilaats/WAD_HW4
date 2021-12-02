@@ -133,3 +133,14 @@
   width: 30px;
   height: 30px;
 }
+
+.errorPage {
+  height: 400px;
+}
+
+.error {
+  height: fit-content;
+  width: fit-content;
+  margin: 20px auto;
+  font-size: 30px;
+}
