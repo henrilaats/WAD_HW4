@@ -76,6 +76,20 @@ app.delete('/posts/:id', async(req, res) => {
   console.error(err.message);
   }
  });
+
+ app.post('/', async(req, res) => {
+  try {
+  const post = req.body;
+  console.log(post);
+  const newpost = await pool.query(
+  "INSERT INTO posts(id, title, body, likes) values ($1, $2, $3, $4) RETURNING*", [3,post.title, post.body, 0]
+  );
+  res.redirect('posts');
+  } catch (err) {
+  console.error(err.message)
+  }
+ });
+ 
  
 
 app.use((req, res) => {
