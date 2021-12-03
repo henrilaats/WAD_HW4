@@ -144,3 +144,25 @@
   margin: 20px auto;
   font-size: 30px;
 }
+
+.singlePostPage {
+  height: 400px;
+  background-color: powderblue;
+}
+.singlePost {
+  height: fit-content;
+  width: fit-content;
+  padding: 20px;
+  margin: 20px auto;
+  background-color: purple;
+}
+.postLikes {
+  margin-right: 10px;
+}
+
+.delete {
+  height: fit-content;
+  width: fit-content;
+  margin: 20px auto;
+  background-color: seagreen;
+}

@@ -11,9 +11,10 @@
     <div class="page">
       <div class="side"></div>
       <div class="middle">
-        <a href="/singlepost">
+        
       <% if (posts.length > 0) { %>
         <% posts.forEach(post => { %>
+          <a href="/singlepost/<%= post.id %>">
           <div class="post">
             <h1>Title: <%= post.title %></h1>
             <h3>Body: <%= post.body %></p>
@@ -21,13 +22,13 @@
                 <button ><img src="likebutton.jpg" alt="Account profile" class="likeimage"><%= post.likes %></button> 
               </div>
           </div>
+        </a>
 
         <% }) %>
         <% } else { %>
         <p>You did not post anything...</p>
         <% } %>
       </div>
-    </a>
       <div class="side"></div>
     </div>
     <%- include('./partials/footer.ejs') %>
