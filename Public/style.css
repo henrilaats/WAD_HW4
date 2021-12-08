@@ -1,168 +1,170 @@
-
+body{
+    min-width: 100%;
+    min-height: 100%;
+    margin: 0;
+}
 
 .page {
-  display: flex;
-  height: fit-content;
-  margin-top: 10px;
+    display: flex;
+    margin-top: 10px;
 }
 
 .side {
-  background-color: cornflowerblue;
-  width: 30%;
-  height: 600px;
+    background-color: cornflowerblue;
+    width: 30%;
+    height: 600px;
 }
 
 .middle {
-  background-color: white;
-  width: 40%;
-  height: 600px;
+    background-color: white;
+    width: 40%;
+    height: 600px;
+    overflow-y: scroll;
+    padding-bottom: 69px;
 }
 
 .navbar {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: wheat;
 }
 .upperNav {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 .lowerNav {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.lowerNav a {
+    margin-right: 15px;
+    text-decoration: none;
+    color: #1778bd;
 }
 
 .navbar div {
-  height: 35px;
-  flex-grow: 5;
-  padding: 5px;
+    height: 35px;
+    flex-grow: 5;
+    padding: 5px;
 }
 
 .calenderImg {
-  width: 40px;
-  display: flex;
-  justify-content: flex-start;
+    width: 40px;
+    display: flex;
+    justify-content: flex-start;
 }
 .userImg {
-  margin-left: 300px;
-  width: 40px;
-  display: flex;
-  justify-content: flex-start;
+    margin-left: 300px;
+    width: 40px;
+    display: flex;
+    justify-content: flex-start;
 }
 
 .search-container {
-  display: flex;
+    display: flex;
 }
 
 .search-container > input {
-  box-sizing: border-box;
-  height: 30px;
-  width: 75%;
-  margin: 0;
-  padding: 5px;
-  border: 1px solid #1778bd;
+    box-sizing: border-box;
+    height: 30px;
+    width: 75%;
+    margin: 0;
+    padding: 5px;
+    border: 1px solid #1778bd;
 }
 .search-container > button {
-  height: 30px;
-  width: 25%;
-  margin: 0;
-  padding: 5px;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-  border: 1px solid #1778bd;
-  background-color: #1778bd;
-  font-size: 14px;
-  font-weight: bold;
-  color: white;
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+    height: 30px;
+    width: 25%;
+    margin: 0;
+    padding: 5px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border: 1px solid #1778bd;
+    background-color: #1778bd;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    font-family: Avenir, Helvetica, Arial, sans-serif;
 }
 .search-container button:hover {
-  background-color: skyblue;
+    background-color: skyblue;
 }
 
 .newPost {
-  height: 300px;
-  width: 500px;
-  margin: 20px auto;
-  background-color: violet;
-
+    height: 300px;
+    width: 500px;
+    margin: 20px auto;
+    background-color: violet;
 }
 
 
 
 
 .post{
-  margin: 20px auto;
-  border: 1px solid darkgray;
-  border-radius: 5%;
-  width: 70%;
-  padding: 15px;
-  font-weight: bold;
-  font-size: 20px;
-  box-shadow: 5px 5px 5px 5px gray;
+    margin: 20px auto;
+    border: 1px solid darkgray;
+    border-radius: 5%;
+    width: 70%;
+    padding: 15px;
+    box-shadow: 5px 5px 5px 5px gray;
 }
 .post-top{
-  display: flex;
-  justify-content: space-between;
-  height: 30px;
-  font-weight: normal;
-  color: gray;
-  font-size: 15px;
+    display: flex;
+    justify-content: space-between;
+    height: 30px;
+    font-weight: normal;
+    color: gray;
+    font-size: 15px;
 }
 .post-image{
-  display: flex;
-  justify-content: center;
-  height: 350px;
-  padding-top: 10px;
-  overflow: hidden;
+    display: flex;
+    justify-content: center;
+    height: 350px;
+    padding-top: 10px;
+    overflow: hidden;
 }
 
 .like_button button{
-  border: none;
-  padding: 5px;
-  background-color: white;
-  margin-top: 10px;
+    border: none;
+    padding: 5px;
+    background-color: white;
+    margin-top: 10px;
 }
 .like_button button:hover{
-  background-color: skyblue;
+    background-color: skyblue;
+    cursor: pointer;
 }
+
 .likeimage {
-  width: 30px;
-  height: 30px;
+    width: 30px;
+    height: 30px;
 }
 
 .errorPage {
-  height: 400px;
+    height: 400px;
 }
 
 .error {
-  height: fit-content;
-  width: fit-content;
-  margin: 20px auto;
-  font-size: 30px;
+    height: fit-content;
+    width: fit-content;
+    margin: 20px auto;
+    font-size: 30px;
 }
 
-.singlePostPage {
-  height: 400px;
-  background-color: powderblue;
-}
-.singlePost {
-  height: fit-content;
-  width: fit-content;
-  padding: 20px;
-  margin: 20px auto;
-  background-color: purple;
-}
-.postLikes {
-  margin-right: 10px;
-}
-
-.delete {
-  height: fit-content;
-  width: fit-content;
-  margin: 20px auto;
-  background-color: seagreen;
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 6vh;
+    padding-top: 3.6vh;
+    background-color: wheat;
+    color: black;
+    text-align: center;
 }

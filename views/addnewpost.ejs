@@ -1,24 +1,38 @@
 <html lang="en">
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=>, initial-scale=1.0" />
-  <link rel="stylesheet" type="text/css" href="/style.css" />
-  <title>Create a post</title>
-  <body>
-    <%- include('./partials/navbar.ejs') %>
-    <div class="newPost">
-      <h1>Create a post</h1>
-      <br />
-      <div class="create-post">
-        <form action="/" method="POST">
-          <label for="title">Post title:</label>
-          <input type="text" id="title" name="title" required /><br /><br />
-          <label for="body">Post Body:</label>
-          <input type="text" id="body" name="body" required /><br /><br />
-          <button>Submit</button>
-        </form>
-      </div>
-    </div>
-    <%- include('./partials/footer.ejs') %>
-  </body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=>, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="/style.css" />
+        <title> Create a post</title>
+    </head>
+
+    <body>
+        <%- include('./partials/navbar.ejs') %>
+        
+        <div class="newPost">
+            <h1>Create a post</h1>
+            <br>
+
+            <div class="create-post">
+                <form action="/addnewpost" method="POST">
+                    <label for="title">Post title:</label>
+                    <input type="text" id="title" name="title" required><br><br>
+                    
+                    <label for="author">Author:   </label>
+                    <input type="text" id="author" name="author" required><br><br>
+                    
+                    <label for="content">Post content:</label>
+                    <input type="text" id="content" name="content" required><br><br>
+                    
+                    <label for="link"> Image link:</label>
+                    <input type="text" id="link" name="link"></textarea><br><br>
+                    
+                    <button>Add post</button>
+                </form>
+            </div>
+        </div>
+
+        <%- include('./partials/footer.ejs') %>
+    </body>
 </html>
