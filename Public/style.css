@@ -1,170 +1,236 @@
 body{
-    min-width: 100%;
-    min-height: 100%;
-    margin: 0;
+  min-width: 100%;
+  min-height: 100%;
+  margin: 0;
 }
 
 .page {
-    display: flex;
-    margin-top: 10px;
+  padding-top: 90px;
+  display: flex;
+  margin-top: 10px;
+  height: fit-content;
 }
 
 .side {
-    background-color: cornflowerblue;
-    width: 30%;
-    height: 600px;
+  background-color: #1778bd;
+  width: 30%;
 }
 
 .middle {
-    background-color: white;
-    width: 40%;
-    height: 600px;
-    overflow-y: scroll;
-    padding-bottom: 69px;
+  background-color: white;
+  width: 40%;
+  overflow-y: scroll;
+  padding-bottom: 69px;
 }
 
 .navbar {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: wheat;
+  top: 0px;
+  padding-top: 2px;
+  position: fixed;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
 }
 .upperNav {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 .lowerNav {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  color: #1778bd;
+  font-weight: bold;
 }
 
 .lowerNav a {
-    margin-right: 15px;
-    text-decoration: none;
-    color: #1778bd;
+  padding: 5px;
+  text-decoration: underline;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  color: #1778bd;
 }
-
+.lowerNav a:hover{
+  color: skyblue;
+}
 .navbar div {
-    height: 35px;
-    flex-grow: 5;
-    padding: 5px;
+  height: 35px;
+  padding: 5px
 }
 
 .calenderImg {
-    width: 40px;
-    display: flex;
-    justify-content: flex-start;
+  width: 40px;
+  display: flex;
+  justify-content: flex-start;
 }
 .userImg {
-    margin-left: 300px;
-    width: 40px;
-    display: flex;
-    justify-content: flex-start;
+  width: 40px;
+  display: flex;
+  justify-content: flex-start;
 }
 
 .search-container {
-    display: flex;
+  display: flex;
+  width: 300px;
 }
 
 .search-container > input {
-    box-sizing: border-box;
-    height: 30px;
-    width: 75%;
-    margin: 0;
-    padding: 5px;
-    border: 1px solid #1778bd;
+  box-sizing: border-box;
+  height: 30px;
+  width: 75%;
+  margin: 0;
+  padding: 5px;
+  border: 1px solid #1778bd;
 }
 .search-container > button {
-    height: 30px;
-    width: 25%;
-    margin: 0;
-    padding: 5px;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    border: 1px solid #1778bd;
-    background-color: #1778bd;
-    font-size: 14px;
-    font-weight: bold;
-    color: white;
-    font-family: Avenir, Helvetica, Arial, sans-serif;
+  height: 30px;
+  width: 25%;
+  margin: 0;
+  padding: 5px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border: 1px solid #1778bd;
+  background-color: #1778bd;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
 }
 .search-container button:hover {
-    background-color: skyblue;
+  background-color: skyblue;
 }
-
+.page-newPost{
+  padding-top: 90px;
+  display: flex;
+  height: 660px;
+}
 .newPost {
-    height: 300px;
-    width: 500px;
-    margin: 20px auto;
-    background-color: violet;
+  height: 300px;
+  padding-left: 20px;
+  width: 480px;
+  margin: 20px auto;
+  background-color: #1778bd;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  color: white;
+  border: 2px solid #1778bd;
+  border-radius: 20px;
 }
-
-
-
-
+.newPost button{
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  color: #1778bd;
+  background-color: white;
+  font-weight: bold;
+  width: 20%;
+  border: 1px solid white;
+  height: 28px;
+}
+.newPost button:hover{
+  background-color: skyblue;
+}
+.newPost input{
+  width: 50%;
+  height: 30px;
+}
 .post{
-    margin: 20px auto;
-    border: 1px solid darkgray;
-    border-radius: 5%;
-    width: 70%;
-    padding: 15px;
-    box-shadow: 5px 5px 5px 5px gray;
+  margin: 20px auto;
+  border: 1px solid darkgray;
+  border-radius: 5%;
+  width: 70%;
+  padding: 15px;
+  box-shadow: 5px 5px 5px 5px gray;
 }
 .post-top{
-    display: flex;
-    justify-content: space-between;
-    height: 30px;
-    font-weight: normal;
-    color: gray;
-    font-size: 15px;
+  display: flex;
+  justify-content: flex-start;
+  height: 30px;
+  font-weight: normal;
+  color: gray;
+  font-size: 15px;
+}
+.author{
+  padding-top: 10px;
+  padding-left: 5px;
 }
 .post-image{
-    display: flex;
-    justify-content: center;
-    height: 350px;
-    padding-top: 10px;
-    overflow: hidden;
+  display: flex;
+  justify-content: center;
+  height: 350px;
+  padding-top: 10px;
+  overflow: hidden;
+}
+a {
+  color: #1778bd;
+}
+.likes{
+  display: flex;
+  flex-direction: row;
 }
 
 .like_button button{
-    border: none;
-    padding: 5px;
-    background-color: white;
-    margin-top: 10px;
+  border: none;
+  padding-bottom: 3px;
+  background-color: white;
+  margin-top: 10px;
 }
 .like_button button:hover{
-    background-color: skyblue;
-    cursor: pointer;
+  background-color: skyblue;
+  cursor: pointer;
 }
 
 .likeimage {
-    width: 30px;
-    height: 30px;
+  width: 30px;
+  height: 30px;
+}
+.nbLikes{
+  padding-left: 5px;
+  padding-top: 22px;
+}
+.side-single{
+  background-color: #1778bd;
+  width: 30%;
+  height: 660px;
+}
+.nbLikes-single{
+  padding-top: 0px
 }
 
+.delete-button {
+  display: flex;
+  justify-content: center;
+}
+.delete-button button{
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  color: white;
+  background-color: #1778bd;
+  font-weight: bold;
+  width: 110%;
+  border: 1px solid #1778bd;
+  height: 28px;
+}
 .errorPage {
-    height: 400px;
+  height: 400px;
 }
-
 .error {
-    height: fit-content;
-    width: fit-content;
-    margin: 20px auto;
-    font-size: 30px;
+  height: fit-content;
+  width: fit-content;
+  margin: 20px auto;
+  font-size: 30px;
 }
 
 footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 6vh;
-    padding-top: 3.6vh;
-    background-color: wheat;
-    color: black;
-    text-align: center;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  padding-top: 10px;
+  background-color: white;
+  text-align: center;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  color: #1778bd;
 }
+

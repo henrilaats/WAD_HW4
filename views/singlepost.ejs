@@ -1,31 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" type="text/css" href="/style.css" />
-        <title>Single Post</title>
-    </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="/style.css" />
+  <title>Single Post</title>
+</head>
 
-    <body >
-        <%- include('./partials/navbar.ejs') %>
+<body >
+<%- include('./partials/navbar.ejs') %>
 
-        <div class="page">
-            <div class="side"></div>
+<div class="page">
+  <div class="side-single"></div>
 
-            <div class="middle">
-                <h1><%= post.title %></h1>
+  <div class="middle">
+    <div class="post">
+      <div class="post-top">
+        <img src="../account.png" alt="postIt" class="author-profile" />
+        <div class="author"> <%= post.author %> </div>
+      </div>
+    <h2><%= post.title %></h2>
+    <h3><%= post.body %></h3>
+      <div class="nbLikes-single">
+        <%= post.likes %> like(s).
+      </div>
+    </div>
+    <div class="delete-button">
+    <a href="/delete/<%= post.id %>"><button>Delete</button></a>
+    </div>
+  </div>
 
-                <p><%= post.content %></p>
-                <br/>
-                
-                <a href="/delete/<%= post.id %>"><button>Delete</button></a> 
-            </div>
-
-            <div class="side"></div>
-        </div>
-
-        <%- include('./partials/footer.ejs') %>
-    </body>
+  <div class="side-single"></div>
+</div>
+<%- include('./partials/footer.ejs') %>
+</body>
 </html>

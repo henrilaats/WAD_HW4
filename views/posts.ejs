@@ -1,55 +1,61 @@
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <link rel="stylesheet" type="text/css" href="/style.css" />
-        <title>Posts</title>
-    </head>
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/style.css"/>
+    <title>Posts</title>
+</head>
 
-    <body>
-        <%- include('./partials/navbar.ejs') %>
+<body>
+<%- include('./partials/navbar.ejs') %>
 
-        <div class="page">
-            <div class="side"></div>
+<div class="page">
+    <div class="side"></div>
 
-            <div class="middle">
-                <% if (posts.length > 0) { %>
-                    <% posts.forEach(post => { %>
-                        <div class="post">
-                            <a href="/post/<%= post.id %>">
-                                <h1><%= post.title %></h1>
-                            </a>
-                            <p><%= post.content %></p>
-                            <div class="like_button" nb-likes="<%= post.likes %>" onclick="addLike('<%= post.id %>', '<%= post.likes %>')"> 
-                                <button ><img src="likebutton.jpg" alt="Account profile" class="likeimage"></button> 
-                            </div>
-                            
-                            <div class="nbLikes">
-                                <%= post.likes %> like(s).
-                            </div>
-                        </div>
+    <div class="middle">
+        <% if (posts.length > 0) { %>
+            <% posts.forEach(post => { %>
+                <div class="post">
+                    <div class="post-top">
+                        <img src="account.png" alt="postIt" class="author-profile" />
+                        <div class="author"> <%= post.author %> </div>
+                    </div>
+                    <a href="/post/<%= post.id %>">
+                        <h2><%= post.title %></h2>
+                    </a>
+                    <h3><%= post.body %></h3>
+                    <div class="likes">
+                    <div class="like_button"
+                         onclick="addLike('<%= post.id %>', '<%= post.likes %>')">
+                        <button><img src="likebutton.jpg" alt="Account profile" class="likeimage"></button>
+                    </div>
 
-                    <% }) %>
-                <% } else { %>
-                    <p>You did not post anything...</p>
-                <% } %>
-            </div>
+                    <div class="nbLikes">
+                        <%= post.likes %> like(s).
+                    </div>
+                    </div>
+                </div>
+            <% }) %>
+        <% } else { %>
+            <p>You did not post anything...</p>
+        <% } %>
+    </div>
 
-            <div class="side"></div>
-        </div>
+    <div class="side"></div>
+</div>
 
-        <%- include('./partials/footer.ejs') %>
-    </body>
+<%- include('./partials/footer.ejs') %>
+</body>
 </html>
 
 <script>
     function addLike(id, likes) {
         n = parseInt(likes) + 1;
-        console.log(id);
+        console.log("siin id",id);
         var url = window.location.origin + "/addlike/" + id;
-        
+
         $(".nbLikes").text(n + " like(s).");
 
         $.ajax({
@@ -65,8 +71,9 @@
             }
         });
     }
+
     $(document).ready(() => {
-        
+
     });
-    
+
 </script>
